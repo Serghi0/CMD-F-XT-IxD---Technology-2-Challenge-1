@@ -1,0 +1,80 @@
+body{
+	background-color: #C9CBCC;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap:10px;
+	
+	grid-template-areas:
+	"header"
+	"body"
+	"footer";
+}
+
+header{
+	grid-area: header;
+	height:100px;
+	background-color: #222222;
+}
+
+main{
+	grid-area:body;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+	height: 600px;
+	
+	grid-template-areas:
+	"distanceToMars"
+	"fuel"
+	"speed"
+	"timeTillArrival";
+}
+
+#distanceToMars{
+	grid-area:distanceToMars;
+	background-color: #AEB0B2;
+}
+
+#fuel{
+	grid-area:fuel;
+	background-color: #AEB0B2;
+}
+
+#speed{
+	grid-area:speed;
+	background-color: #AEB0B2;
+}
+
+#timeTillArrival{
+	grid-area:timeTillArrival;
+	background-color: #AEB0B2;
+}
+
+@media only screen and (min-width: 768px){
+main{
+	grid-area:body;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+	height: 600px;
+	
+	grid-template-areas:
+	"distanceToMars fuel"
+	"speed timeTillArrival";
+}
+
+}
+
+@media only screen and (min-width: 1280px) {
+
+
+}
+
+
+footer{
+	grid-area: footer;
+	height:100px;
+	background-color: #222222;
+}
