@@ -109,7 +109,7 @@ main{
 	grid-area:main;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 0.125fr 1fr 1fr 1fr;
+	grid-template-rows: 0.125fr repeat(4,1fr);
 	grid-gap: 10px;
 	justify-content: center;
 	padding-left: 10%;
@@ -126,48 +126,179 @@ main{
 
 #dashboardTitle{
 	grid-area:Title;
+	border-bottom: 2px solid #000000;  
 }
 
 .graphs{
 	background-color: #AEB0B2;
-	height:350px;
 }
+
+/*----------------Distance to Mars---------------------*/
 
 #distanceToMars{
+
 	grid-area:distanceToMars;
+	display: grid;
+  	grid-template-columns: repeat(5, 1fr);
+  	grid-template-rows: 1fr 1fr 1fr; 
+
 }
 
+/*.testElements{
+	  border: 2px solid #ffa94d;
+
+}*/
+
+#titleMars{
+	text-align:center;
+	grid-column-start:2;
+	grid-column-end:5;
+	grid-row-start:1;
+	grid-row-end:1;
+}
+
+#amountMars{
+	text-align:center;
+	grid-column-start:2;
+	grid-column-end:5;
+	grid-row-start:3;
+	grid-row-end:3;
+}
+
+#amountMars > h1 {
+ background-color: grey;
+}
+
+#mars{
+	justify-self: center;
+	align-self: center;
+	background-color: ;
+	width:75%;
+	height:auto;
+	grid-column-start: 5;
+  	grid-column-end: 5;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	z-index: 1;
+}
+#rocket{
+	justify-self: center;
+	align-self: center;
+	width:75%;
+	height:75%;
+	grid-column-start: 2;
+  	grid-column-end: 2;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	z-index: 2;
+}
+#line{
+	padding-right: 10%;	
+	justify-self: center;
+	align-self: center;
+	width:100%;
+	height: auto;
+	grid-column-start: 1;
+  	grid-column-end: 6;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	z-index: 0;
+}
+
+/*---------------------Fuel-----------------*/
+
 #fuel{
+	background-color: red;
 	grid-area:fuel;
 }
 
+/*---------------------Speed-----------------*/
+
 #speed{
+	background-color: blue;
 	grid-area:speed;
 }
 
+/*---------------------TimeTillArrival-----------------*/
+
 #timeTillArrival{
+	background-color: orange;
 	grid-area:timeTillArrival;
 }
+
+/*------------------mediaQueries------------------*/
 
 @media only screen and (min-width: 768px){
 main{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 0.125fr 1fr 1fr;
-	grid-gap: 10px;
+	grid-template-columns: repeat(5,1fr);
+	grid-template-rows: 0.125fr 0.5fr 1fr 1fr;
+	grid-gap: 15px;
 	padding-left: 5%;
 	padding-right: 5%;
 
-	
-	grid-template-areas:
-	"Title Title"
-	"distanceToMars fuel"
-	"speed timeTillArrival";
+}
+/*.graphs{
+  	border: 2px solid #ffa94d;
+  	border-radius: 5px;
+  	height:auto;}
+*/
+#dashboardTitle{
+	text-align:left;
+	grid-column-start:1;
+	grid-column-end:6;
+	grid-row-start:1;
+	grid-row-end:1;
+}
+
+#distanceToMars{
+	grid-column-start:1;
+	grid-column-end:4;
+	grid-row-start:2;
+	grid-row-end:2;
+}
+
+#fuel{
+	background-color: red;
+	grid-column-start: 4;
+  	grid-column-end: 6;
+  	grid-row-start: 2;
+  	grid-row-end: 4;
+}
+#speed{
+	background-color: blue;
+	grid-column-start: 1;
+  	grid-column-end: 4;
+  	grid-row-start: 3;
+  	grid-row-end: 5;
+}
+#timeTillArrival{
+	background-color: orange;
+	grid-column-start: 4;
+  	grid-column-end: 6;
+  	grid-row-start: 4;
+  	grid-row-end: 5;
 }
 
 }
 
 @media only screen and (min-width: 1280px) {
+body{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-row-gap: 10px;
+	margin:0;
+
+	
+	grid-template-areas:
+	"header header header"
+	"main main main"
+	"footer footer footer";
+}
+
+
+
+
 main{
 	padding-left: 10%;
 	padding-right: 10%;
@@ -182,8 +313,4 @@ footer{
 	background-color: #222222;
 }
 
-#lol{
-	width:100%;
-	height:100%; 
 
-}
