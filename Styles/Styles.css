@@ -1,5 +1,7 @@
 html {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+
 }
 
 *, 
@@ -14,17 +16,14 @@ body{
 	grid-template-columns: 0 1fr 1fr;
 	grid-row-gap: 10px;
 	margin:0;
+
 	
 	grid-template-areas:
 	"menu header header"
-	"menu Title Title"
 	"menu main main"
 	"menu footer footer";
 }
 
-#dashboardTitle{
-	grid-area:Title;
-}
 
 #menu{
 	grid-area:menu;
@@ -104,21 +103,29 @@ nav > ul > li > a {
 
 .logo{
 	grid-area:logo;
-	color:red;
 }
 
 main{
 	grid-area:main;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.125fr 1fr 1fr 1fr;
 	grid-gap: 10px;
+	justify-content: center;
+	padding-left: 10%;
+	padding-right: 10%;
+
 	
 	grid-template-areas:
+	"Title"
 	"distanceToMars"
 	"fuel"
 	"speed"
 	"timeTillArrival";
+}
+
+#dashboardTitle{
+	grid-area:Title;
 }
 
 .graphs{
@@ -146,10 +153,14 @@ main{
 main{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 0.125fr 1fr 1fr;
 	grid-gap: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
+
 	
 	grid-template-areas:
+	"Title Title"
 	"distanceToMars fuel"
 	"speed timeTillArrival";
 }
@@ -157,7 +168,10 @@ main{
 }
 
 @media only screen and (min-width: 1280px) {
-
+main{
+	padding-left: 10%;
+	padding-right: 10%;
+}
 
 }
 
@@ -166,4 +180,10 @@ footer{
 	grid-area: footer;
 	height:100px;
 	background-color: #222222;
+}
+
+#lol{
+	width:100%;
+	height:100%; 
+
 }

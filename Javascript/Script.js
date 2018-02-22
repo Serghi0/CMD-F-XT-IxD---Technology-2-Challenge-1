@@ -1,3 +1,5 @@
+
+
 document.getElementsByClassName('menutoggle')[0].onclick = function () {
 	var menu = document.getElementsByTagName('body')[0];
 	if(menu.className == "active"){
@@ -6,3 +8,4 @@ document.getElementsByClassName('menutoggle')[0].onclick = function () {
 		menu.className = "active";
 	}
 }
+
