@@ -136,7 +136,6 @@ main{
 /*----------------Distance to Mars---------------------*/
 
 #distanceToMars{
-
 	grid-area:distanceToMars;
 	display: grid;
   	grid-template-columns: repeat(7, 1fr);
@@ -278,12 +277,18 @@ main{
 /*---------------------Fuel-----------------*/
 
 #fuel{
+	background-image: url("../Images/IMG_9463.JPG");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	grid-area:fuel;
 }
 
 /*---------------------Speed-----------------*/
 
 #speed{
+	background-image: url("../Images/IMG_9463.JPG");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	grid-area:speed;
 }
 
