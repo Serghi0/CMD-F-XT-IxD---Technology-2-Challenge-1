@@ -112,8 +112,8 @@ main{
 	grid-template-rows: 0.125fr repeat(4,1fr);
 	grid-gap: 10px;
 	justify-content: center;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: 1%;
+	padding-right: 1%;
 
 	
 	grid-template-areas:
@@ -396,8 +396,8 @@ footer{
 }
 
 /*------------------mediaQueries------------------*/
-/*
-@media screen and (min-width: 768px){
+/*###########Medium Screen########################*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
 main{
 	display: grid;
 	grid-template-columns: repeat(5,1fr);
@@ -407,10 +407,6 @@ main{
 	padding-right: 5%;
 
 }
-/*.graphs{
-  	border: 2px solid #ffa94d;
-  	border-radius: 5px;
-  	height:auto;}
 
 #dashboardTitle{
 	text-align:left;
@@ -448,7 +444,9 @@ main{
 
 }
 
-@media only screen and (min-width: 1280px) {
+/*#############Big screen###########*/
+
+@media only screen and (min-width: 960px) {
 body{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -463,16 +461,52 @@ body{
 }
 
 
-
-
 main{
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	grid-template-rows: 0.125fr 0.5fr 1fr 1fr;
+	grid-gap: 15px;
 	padding-left: 10%;
 	padding-right: 10%;
-}
 
 }
-*/
 
+#dashboardTitle{
+	text-align:left;
+	grid-column-start:1;
+	grid-column-end:6;
+	grid-row-start:1;
+	grid-row-end:1;
+}
+
+#distanceToMars{
+	grid-column-start:1;
+	grid-column-end:4;
+	grid-row-start:2;
+	grid-row-end:2;
+}
+
+#fuel{
+	grid-column-start: 4;
+  	grid-column-end: 6;
+  	grid-row-start: 2;
+  	grid-row-end: 4;
+}
+#speed{
+	grid-column-start: 1;
+  	grid-column-end: 4;
+  	grid-row-start: 3;
+  	grid-row-end: 5;
+}
+#timeTillArrival{
+	grid-column-start: 4;
+  	grid-column-end: 6;
+  	grid-row-start: 4;
+  	grid-row-end: 5;
+}
+
+
+}
 
 
 
