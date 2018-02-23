@@ -398,6 +398,20 @@ footer{
 /*------------------mediaQueries------------------*/
 /*###########Medium Screen########################*/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+body{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.125fr 1fr 0.125fr;
+	grid-row-gap: 10px;
+	margin:0;
+
+	
+	grid-template-areas:
+	"header header"
+	"main main"
+	"footer footer";
+}
+
 main{
 	display: grid;
 	grid-template-columns: repeat(5,1fr);
@@ -449,15 +463,16 @@ main{
 @media only screen and (min-width: 960px) {
 body{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.125fr 1fr 0.125fr;
 	grid-row-gap: 10px;
 	margin:0;
 
 	
 	grid-template-areas:
-	"header header"
-	"main main"
-	"footer footer";
+	"header header header"
+	"main main main"
+	"footer footer footer";
 }
 
 
