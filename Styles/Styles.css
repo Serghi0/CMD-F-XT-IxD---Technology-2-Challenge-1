@@ -269,7 +269,7 @@ main{
 
 /*------------------mediaQueries------------------*/
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 768px){
 main{
 	display: grid;
 	grid-template-columns: repeat(5,1fr);
