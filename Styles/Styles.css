@@ -139,7 +139,7 @@ main{
 
 	grid-area:distanceToMars;
 	display: grid;
-  	grid-template-columns: repeat(5, 1fr);
+  	grid-template-columns: repeat(7, 1fr);
   	grid-template-rows: 1fr 1fr 1fr; 
 
 }
@@ -151,21 +151,22 @@ main{
 
 #titleMars{
 	text-align:center;
-	grid-column-start:2;
-	grid-column-end:5;
+	grid-column-start:3;
+	grid-column-end:6;
 	grid-row-start:1;
 	grid-row-end:1;
 }
 
 #amountMars{
+	justify-content: center;
 	text-align:center;
-	grid-column-start:2;
-	grid-column-end:5;
+	grid-column-start:3;
+	grid-column-end:6;
 	grid-row-start:3;
 	grid-row-end:3;
 }
 
-#amountMars > h1 span {
+#numberAmountMars  {
  background-color: grey;
 }
 
@@ -174,8 +175,8 @@ main{
 	align-self: center;
 	width:75%;
 	height:auto;
-	grid-column-start: 5;
-  	grid-column-end: 5;
+	grid-column-start: 7;
+  	grid-column-end: 8;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 1;
@@ -184,7 +185,7 @@ main{
 	justify-self: center;
 	align-self: center;
 	width:75%;
-	height:75%;
+	height:auto;
 	grid-column-start: 1;
   	grid-column-end: 1;
   	grid-row-start: 2;
@@ -195,7 +196,7 @@ main{
 	justify-self: center;
 	align-self: center;
 	width:75%;
-	height:75%;
+	height:auto;
 	grid-column-start: 2;
   	grid-column-end: 2;
   	grid-row-start: 2;
@@ -206,7 +207,7 @@ main{
 	justify-self: center;
 	align-self: center;
 	width:75%;
-	height:75%;
+	height:auto;
 	grid-column-start: 3;
   	grid-column-end: 3;
   	grid-row-start: 2;
@@ -217,7 +218,7 @@ main{
 	justify-self: center;
 	align-self: center;
 	width:75%;
-	height:75%;
+	height:auto;
 	grid-column-start: 4;
   	grid-column-end: 4;
   	grid-row-start: 2;
@@ -229,13 +230,38 @@ main{
 	justify-self: center;
 	align-self: center;
 	width:75%;
-	height:75%;
+	height:auto;
 	grid-column-start: 5;
   	grid-column-end: 5;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
 }
+
+#rocket6{
+	justify-self: center;
+	align-self: center;
+	width:75%;
+	height:auto;
+	grid-column-start: 6;
+  	grid-column-end: 6;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	z-index: 2;
+}
+
+#rocket7{
+	justify-self: center;
+	align-self: center;
+	width:75%;
+	height:auto;
+	grid-column-start: 7;
+  	grid-column-end: 7;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	z-index: 2;
+}
+
 #line{
 	padding-right: 10%;	
 	justify-self: center;
@@ -243,7 +269,7 @@ main{
 	width:100%;
 	height: auto;
 	grid-column-start: 1;
-  	grid-column-end: 6;
+  	grid-column-end: 8;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 0;
@@ -265,8 +291,102 @@ main{
 
 #timeTillArrival{
 	grid-area:timeTillArrival;
+	display: grid;
+  	grid-template-columns: 1fr 0.125fr 1fr 0.125fr 1fr;
+  	grid-template-rows: 0.125fr 0.25fr 1fr 0.5fr; 
+	grid-row-gap: 0;
+	margin:0;
 }
 
+#titleTime{
+	text-align:center;
+	grid-column-start:1;
+	grid-column-end:6;
+	grid-row-start:1;
+	grid-row-end:1;
+}
+
+#days,#hours,#minutes, #timeFooter{
+	background-color: grey;
+
+}
+
+#days{
+	text-align:center;
+	grid-column-start:1;
+	grid-column-end:3;
+	grid-row-start:2;
+	grid-row-end:2;
+}
+
+#hours{
+	text-align:center;
+	grid-column-start:3;
+	grid-column-end:5;
+	grid-row-start:2;
+	grid-row-end:2;
+
+}
+
+#minutes{
+	text-align:center;
+	grid-column-start:5;
+	grid-column-end:6;
+	grid-row-start:2;
+	grid-row-end:2;
+
+}
+
+#daysAantal,#hoursAantal,#minutesAantal,#dubbelpunt1, #dubbelpunt2{
+	background-color: black;
+	color:red;
+	text-align:center;
+	justify-content: center;
+}
+
+#dubbelpunt1{
+	grid-column-start:2;
+	grid-column-end:3;
+	grid-row-start:3;
+	grid-row-end:3;
+}
+
+#dubbelpunt2{
+	grid-column-start:4;
+	grid-column-end:5;
+	grid-row-start:3;
+	grid-row-end:3;
+}
+
+#daysAantal{
+	grid-column-start:1;
+	grid-column-end:2;
+	grid-row-start:3;
+	grid-row-end:3;
+}
+
+#hoursAantal{
+	grid-column-start:3;
+	grid-column-end:4;
+	grid-row-start:3;
+	grid-row-end:3;
+
+}
+
+#minutesAantal{
+	grid-column-start:5;
+	grid-column-end:6;
+	grid-row-start:3;
+	grid-row-end:3;
+
+}
+
+#timeFooter{
+	grid-column-start:1;
+	grid-column-end:6;
+	grid-row-start:4;
+	grid-row-end:4;
+}
 /*--------------------Footer--------------------------*/
 
 footer{
@@ -331,15 +451,15 @@ main{
 @media only screen and (min-width: 1280px) {
 body{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-row-gap: 10px;
 	margin:0;
 
 	
 	grid-template-areas:
-	"header header header"
-	"main main main"
-	"footer footer footer";
+	"header header"
+	"main main"
+	"footer footer";
 }
 
 
