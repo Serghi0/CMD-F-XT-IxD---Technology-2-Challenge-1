@@ -110,7 +110,7 @@ main{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 0.125fr repeat(4,1fr);
-	grid-gap: 10px;
+	grid-gap: 20px;
 	justify-content: center;
 	padding-left: 1%;
 	padding-right: 1%;
@@ -131,6 +131,7 @@ main{
 
 .graphs{
 	background-color: #AEB0B2;
+	border-radius: 10px;
 }
 
 /*----------------Distance to Mars---------------------*/
