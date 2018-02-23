@@ -91,7 +91,6 @@ function bepaalTijd(){
 		case(fase==7):
 		days = 0;
 		hours = Math.floor(Math.random()*24);
-
 		break;
 	}
 

@@ -396,7 +396,7 @@ footer{
 }
 
 /*------------------mediaQueries------------------*/
-
+/*
 @media screen and (min-width: 768px){
 main{
 	display: grid;
@@ -411,7 +411,7 @@ main{
   	border: 2px solid #ffa94d;
   	border-radius: 5px;
   	height:auto;}
-*/
+
 #dashboardTitle{
 	text-align:left;
 	grid-column-start:1;
