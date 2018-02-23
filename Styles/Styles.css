@@ -157,7 +157,12 @@ main{
 	grid-column-end:6;
 	grid-row-start:1;
 	grid-row-end:1;
+	background-color: grey;
+	border-radius: 10px;
+
 }
+
+
 
 #amountMars{
 	justify-content: center;
@@ -169,6 +174,7 @@ main{
 }
 
 #numberAmountMars  {
+	border-radius: 10px;
  background-color: grey;
 }
 
