@@ -136,6 +136,9 @@ main{
 /*----------------Distance to Mars---------------------*/
 
 #distanceToMars{
+	background-image: url("../Images/8-bit space.png");
+	background-repeat: repeat;
+	background-size: 50% 100%;
 	grid-area:distanceToMars;
 	display: grid;
   	grid-template-columns: repeat(7, 1fr);
