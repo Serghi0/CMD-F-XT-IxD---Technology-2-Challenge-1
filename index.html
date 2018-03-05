@@ -5,6 +5,8 @@
  		<meta name="viewport" content="width=device-width, initial-scale=1">
  		<title>SpaceX Dashboard</title>
 		<link href="Styles/Styles.css" type="text/css" rel="stylesheet" />
+		<link href="Styles/csshake-little.css" type="text/css" rel="stylesheet" />
+    	<script src="Javascript/gauge.min.js"></script>
 		<script type="text/javascript" src="Javascript/jquery-1.9.1.min.js"></script>
 	</head>
 	<body>
@@ -28,18 +30,26 @@
  			</section>
  			<section id="distanceToMars" class="graphs">
 				<h1 id="titleMars">Distance to Mars</h1>
-				<img src="Images/rocket.svg" alt="Rocket" id="rocket">
+				<img src="Images/rocket.svg" alt="Rocket" id="rocket" class="rocketMove shake-little">
 				<img src="Images/mars.svg" alt="Mars" id="mars">
-				<img src="Images/Line.svg" alt="Line" id="line">
+				<!--<img src="Images/Line.svg" alt="Line" id="line">-->
 				<section id="amountMars"><h3><div id="numberAmountMars"></div></h3></section>
  			</section>
 
  			<section id="fuel" class="graphs">
- 				
+ 				<h1 id="titleFuel">Fuel</h1>
+ 				<section id="fuelMeter">
+	 			<div id="gauge"></div>
+	    	  		<!--  https://github.com/thlorenz/d3-gauge -->
+					<script src="Javascript/gauge.js"></script>
+ 				</section>
+
  			</section>
 
  			<section id="speed" class="graphs">
- 				
+ 				<h1 id="titleSpeed">Speed</h1>
+ 				<canvas id="speedMeter" 
+				></canvas>
  			</section>
 
  			<section id="timeTillArrival" class="graphs">
@@ -60,6 +70,7 @@
 		</footer>
 
     	<script type="text/Javascript" src="Javascript/Script.js"></script>
+
 
 	</body>
 </html>
