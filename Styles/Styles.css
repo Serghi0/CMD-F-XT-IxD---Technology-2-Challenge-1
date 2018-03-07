@@ -48,6 +48,7 @@ header{
 .menutoggle{
 	grid-area:menutoggle;
 	margin-left: auto;
+	margin-right:5%;
 	display: flex;
 	justify-content: center; /* align horizontal */
 	align-items: center; /* align vertical */
@@ -110,6 +111,11 @@ nav > ul > li > a {
 
 .logo{
 	grid-area:logo;
+	background-image: url("../Images/spaceX_logo.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: left center;
+	margin-left: 5%;
 	display: flex;
 	justify-content: center; /* align horizontal */
 	align-items: center; /* align vertical */
@@ -634,10 +640,12 @@ body{
 	"footer footer";
 }
 
+
+
 main{
 	display: grid;
 	grid-template-columns: repeat(5,1fr);
-	grid-template-rows: 0.125fr 0.5fr 1fr 0.5fr;
+	grid-template-rows: 0.125fr 0.5fr 1fr;
 	grid-gap: 15px;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -657,7 +665,11 @@ main{
 	grid-column-end:3;
 	grid-row-start:2;
 	grid-row-end:2;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
+
+
 
 #fuel{
 	grid-column-start: 3;
@@ -705,6 +717,9 @@ body{
 	"footer footer footer";
 }
 
+.logo{
+	background-size: 50% 100%;
+}
 
 main{
 	display: grid;
