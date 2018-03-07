@@ -179,7 +179,7 @@ function updateGauges() {
 window.onload = function(){
 decideRocketPosition();
 bepaalTijd();
-createFuelGauge({ clazz: 'fuel', label:  '' });
-createSpeedGauge({ clazz: 'speed', label:  '' });
+createFuelGauge({ clazz: 'fuel', label:  'Fuel in kJ' });
+createSpeedGauge({ clazz: 'speed', label:  'Speed in km/h' });
 setInterval(updateGauges, 500);
 };

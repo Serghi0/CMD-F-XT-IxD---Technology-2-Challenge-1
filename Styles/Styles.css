@@ -360,7 +360,9 @@ grid-row-end: 1;
 
 .d3-gauge.fuel .label {
   fill      :  #000000;
-  font-size :  24px;
+  font-size :  12px;
+  font-family: 'Press Start 2P', cursive;
+
 }
 
 .d3-gauge.fuel .major-tick {
@@ -374,9 +376,9 @@ grid-row-end: 1;
 }
 
 .d3-gauge.fuel .major-tick-label {
-  fill         :  #000000;
+  fill         :  #000;
   stroke-width :  2px;
-  font-size    :  15px;
+  font-size    :  12px;
 }
 
 .d3-gauge.fuel .needle {
@@ -395,7 +397,8 @@ grid-row-end: 1;
   fill         :  #000;
   stroke-width :  0px;
   font-family: 'Press Start 2P', cursive;
-
+  font-size: 16px;
+  text-align: center;
 }
 
 .d3-gauge.fuel .green-zone {
@@ -413,9 +416,6 @@ grid-row-end: 1;
 /*---------------------Speed-----------------*/
 
 #speed{
-	/*background-image: url("../Images/IMG_9463.JPG");*/
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 	grid-area:speed;
 	text-align: center;
 
@@ -448,8 +448,8 @@ grid-row-end: 1;
 
 .d3-gauge.speed .label {
   fill      :  #000000;
-  font-size :  24px;
-}
+  font-size :  12px;
+  font-family: 'Press Start 2P', cursive;}
 
 .d3-gauge.speed .major-tick {
   stroke       :  #000000;
@@ -464,7 +464,7 @@ grid-row-end: 1;
 .d3-gauge.speed .major-tick-label {
   fill         :  #000000;
   stroke-width :  2px;
-  font-size    :  15px;
+  font-size    :  12px;
 
 }
 
@@ -484,6 +484,8 @@ grid-row-end: 1;
   fill         :  #000;
   stroke-width :  0px;
   font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  text-align: center;
 }
 
 .d3-gauge.speed .green-zone {
@@ -693,9 +695,7 @@ main{
 /*--------------------Footer--------------------------*/
 
 footer{
-	grid-area: footer;
-	height:auto;
-	background-color: #222222;
+	height:100%;
 }
 
 }
@@ -765,7 +765,13 @@ main{
   	grid-row-end: 5;
 }
 
+/*--------------------Footer--------------------------*/
 
+footer{
+	height:100%;
+}
+
+}
 }
 
 
