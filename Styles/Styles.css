@@ -111,7 +111,7 @@ nav > ul > li > a {
 
 .logo{
 	grid-area:logo;
-	background-image: url("../Images/spaceX_logo.svg");
+	background-image: url("../Images/SpaceX_Logo.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: left center;
