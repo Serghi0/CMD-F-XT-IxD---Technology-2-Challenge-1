@@ -1,6 +1,6 @@
 function generateRandomNumber(){
 number1 = Math.floor(Math.random()*54600000);
-document.getElementById('numberAmountMars').innerHTML= number1 + "/ 54600000 Km";
+document.getElementById('numberAmountMars').innerHTML= number1 + "/ 54600000 km";
 return number1;
 }// De random generated number wordt gegenereerd
 
@@ -60,38 +60,49 @@ function decideRocketPosition(){
 	}
 }// De raket positie wordt bepaald d.m.v. de fase
 
+function pad(number, length) {
+   
+    var str = '' + number;
+    while (str.length < length) {
+        str = '0' + str;
+    }
+   
+    return str;
+
+}//zorgt dat een getal de gewenste aantal digits bevat
+
 function bepaalTijd(){
 	var days;
-	minutes = Math.floor(Math.random()*60);
+	minutes = pad(Math.floor(Math.random()*60),2);
 	var fase = decideFase();
 	switch(true){
 		case(fase==1):		
-		days = Math.floor(Math.random()*(238-237+1)+237);
-		hours = Math.floor(Math.random()*24);
+		days = pad(Math.floor(Math.random()*(238-237+1)+237),3);
+		hours = pad(Math.floor(Math.random()*24),2);
 		break;
 		case(fase==2):
-		days = Math.floor(Math.random()*(237-198+1)+198);
-		hours = Math.floor(Math.random()*(8-1+1)+1);
+		days = pad(Math.floor(Math.random()*(237-198+1)+198),3);
+		hours = pad(Math.floor(Math.random()*(8-1+1)+1),2);
 		break;
 		case(fase==3):
-		days = Math.floor(Math.random()*(158-119+1)+119);
-		hours = Math.floor(Math.random()*(16-1+1)+1);
+		days = pad(Math.floor(Math.random()*(158-119+1)+119),3);
+		hours = pad(Math.floor(Math.random()*(16-1+1)+1),2);
 		break;
 		case(fase==4):
-		days = Math.floor(Math.random()*(119-79+1)+79);
-		hours = Math.floor(Math.random()*24);
+		days = pad(Math.floor(Math.random()*(119-79+1)+79),3);
+		hours = pad(Math.floor(Math.random()*24),2);
 		break;
 		case(fase==5):
-		days =Math.floor(Math.random()*(79-39+1)+39);
-		hours = Math.floor(Math.random()*(8-1+1)+1);
+		days =pad(Math.floor(Math.random()*(79-39+1)+39),3);
+		hours = pad(Math.floor(Math.random()*(8-1+1)+1),2);
 		break;
 		case(fase==6):
-		days = Math.floor(Math.random()*39);
-		hours = Math.floor(Math.random()*(16-1+1)+1);	
+		days = pad(Math.floor(Math.random()*39),3);
+		hours = pad(Math.floor(Math.random()*(16-1+1)+1),2);	
 		break;
 		case(fase==7):
-		days = 0;
-		hours = Math.floor(Math.random()*24);
+		days = pad(0,3);
+		hours = pad(Math.floor(Math.random()*24),2);
 		break;
 	}
 
@@ -126,7 +137,7 @@ function createSpeedGauge (opts) {
 }//De speed gauge wordt creert.
 
 function getRandomNextFuelValue(gauge) {
-  gauge.currentValue = 150000;
+  gauge.currentValue = 154231;
   //gauge.currentValue += (Math.random() - 0.5) * gauge._range / 10; 
   //if (gauge.currentValue < gauge._min) gauge.currentValue = gauge._min;
   //if (gauge.currentValue > gauge._max) gauge.currentValue = gauge._max;

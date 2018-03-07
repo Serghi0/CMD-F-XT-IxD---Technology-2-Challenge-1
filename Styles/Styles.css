@@ -47,7 +47,7 @@ header{
 
 .menutoggle{
 	grid-area:menutoggle;
-  margin-left: auto;
+	margin-left: auto;
 }
 
 .menutoggle a{
@@ -112,7 +112,7 @@ main{
 	grid-area:main;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 0.125fr repeat(4,1fr);
+	grid-template-rows: 0.125fr repeat(3,1fr) 0.25fr;
 	grid-gap: 20px;
 	justify-content: center;
 	padding-left: 1%;
@@ -376,6 +376,8 @@ grid-row-end: 1;
 .d3-gauge.fuel .current-value {
   fill         :  #000;
   stroke-width :  0px;
+  font-family: 'Press Start 2P', cursive;
+
 }
 
 .d3-gauge.fuel .green-zone {
@@ -445,6 +447,7 @@ grid-row-end: 1;
   fill         :  #000000;
   stroke-width :  2px;
   font-size    :  15px;
+
 }
 
 .d3-gauge.speed .needle {
@@ -462,6 +465,7 @@ grid-row-end: 1;
 .d3-gauge.speed .current-value {
   fill         :  #000;
   stroke-width :  0px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .d3-gauge.speed .green-zone {
@@ -483,8 +487,8 @@ grid-row-end: 1;
 #timeTillArrival{
 	grid-area:timeTillArrival;
 	display: grid;
-  	grid-template-columns: 1fr 0.125fr 1fr 0.125fr 1fr;
-  	grid-template-rows: 0.125fr 0.25fr 1fr 0.5fr; 
+  	grid-template-columns: 1fr 0.25fr 1fr 0.25fr 1fr;
+  	grid-template-rows: 0.125fr 0.5fr 1fr 0.5fr; 
 	grid-row-gap: 0;
 	margin:0;
 }
@@ -497,30 +501,41 @@ grid-row-end: 1;
 	grid-row-end:1;
 }
 
-#days,#hours,#minutes, #timeFooter{
+#days,#hours,#minutes, #timeFooter, #space1, #space2{
 	background-color: grey;
-
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
 }
 
 #days{
-	text-align:center;
 	grid-column-start:1;
+	grid-column-end:2;
+	grid-row-start:2;
+	grid-row-end:2;
+}
+
+#space1{
+	grid-column-start:2;
 	grid-column-end:3;
 	grid-row-start:2;
 	grid-row-end:2;
 }
 
 #hours{
-	text-align:center;
 	grid-column-start:3;
-	grid-column-end:5;
+	grid-column-end:4;
 	grid-row-start:2;
 	grid-row-end:2;
 
 }
-
+#space2{
+	grid-column-start:4;
+	grid-column-end:5;
+	grid-row-start:2;
+	grid-row-end:2;
+}
 #minutes{
-	text-align:center;
 	grid-column-start:5;
 	grid-column-end:6;
 	grid-row-start:2;
@@ -531,12 +546,11 @@ grid-row-end: 1;
 #daysAantal,#hoursAantal,#minutesAantal,#dubbelpunt1, #dubbelpunt2{
 	background-color: black;
 	color:red;
-	text-align:center;
-	font-size: 40px;
+	font-size: 32px;
 	font-family: 'Press Start 2P', cursive;
-	padding-top: 40%;
-	
-
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
 }
 
 #dubbelpunt1{
@@ -611,7 +625,7 @@ body{
 main{
 	display: grid;
 	grid-template-columns: repeat(5,1fr);
-	grid-template-rows: 0.125fr 0.5fr 1fr 1fr;
+	grid-template-rows: 0.125fr 0.5fr 1fr 0.5fr;
 	grid-gap: 15px;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -628,28 +642,28 @@ main{
 
 #distanceToMars{
 	grid-column-start:1;
-	grid-column-end:4;
+	grid-column-end:3;
 	grid-row-start:2;
 	grid-row-end:2;
 }
 
 #fuel{
-	grid-column-start: 4;
+	grid-column-start: 3;
   	grid-column-end: 6;
   	grid-row-start: 2;
-  	grid-row-end: 4;
+  	grid-row-end: 3;
 }
 #speed{
 	grid-column-start: 1;
   	grid-column-end: 4;
   	grid-row-start: 3;
-  	grid-row-end: 5;
+  	grid-row-end: 4;
 }
 #timeTillArrival{
 	grid-column-start: 4;
   	grid-column-end: 6;
-  	grid-row-start: 4;
-  	grid-row-end: 5;
+  	grid-row-start: 3;
+  	grid-row-end: 4;
 }
 
 /*--------------------Footer--------------------------*/
