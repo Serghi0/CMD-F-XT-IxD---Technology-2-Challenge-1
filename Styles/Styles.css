@@ -48,6 +48,9 @@ header{
 .menutoggle{
 	grid-area:menutoggle;
 	margin-left: auto;
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
 }
 
 .menutoggle a{
@@ -92,6 +95,7 @@ nav ul li {
   margin: 0;
   list-style: none;
   justify-content: center;
+  align-items: center; /* align vertical */
   border-bottom: 1px solid black;
 }
 
@@ -106,7 +110,15 @@ nav > ul > li > a {
 
 .logo{
 	grid-area:logo;
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
 }
+
+.logo > img {
+}
+
+/*-------------------------------main-----------------------------*/
 
 main{
 	grid-area:main;
