@@ -155,7 +155,7 @@
             t.exports = {
                 size: 300,
                 min: 0,
-                max: 181437,
+                max: 200000,
                 transitionDuration: 500,
                 label: "label.text",
                 minorTicks: 4,
