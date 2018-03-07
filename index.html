@@ -6,7 +6,6 @@
  		<title>SpaceX Dashboard</title>
 		<link href="Styles/Styles.css" type="text/css" rel="stylesheet" />
 		<link href="Styles/csshake-little.css" type="text/css" rel="stylesheet" />
-    	<script src="Javascript/gauge.min.js"></script>
 		<script type="text/javascript" src="Javascript/jquery-1.9.1.min.js"></script>
 	</head>
 	<body>
@@ -39,17 +38,20 @@
  			<section id="fuel" class="graphs">
  				<h1 id="titleFuel">Fuel</h1>
  				<section id="fuelMeter">
-	 			<div id="gauge"></div>
+	 				<div id="fuelGauge"></div>
 	    	  		<!--  https://github.com/thlorenz/d3-gauge -->
-					<script src="Javascript/gauge.js"></script>
+					<script src="Javascript/fuelGauge.js"></script>
  				</section>
 
  			</section>
 
  			<section id="speed" class="graphs">
  				<h1 id="titleSpeed">Speed</h1>
- 				<canvas id="speedMeter" 
-				></canvas>
+	 			<section id="speedMeter">
+	 				<div id="speedGauge"></div>
+	    	  		<!--  https://github.com/thlorenz/d3-gauge -->
+					<script src="Javascript/speedGauge.js"></script>
+ 				</section>
  			</section>
 
  			<section id="timeTillArrival" class="graphs">

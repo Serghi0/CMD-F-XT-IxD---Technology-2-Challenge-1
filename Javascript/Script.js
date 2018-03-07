@@ -2,7 +2,7 @@ function generateRandomNumber(){
 number1 = Math.floor(Math.random()*54600000);
 document.getElementById('numberAmountMars').innerHTML= number1 + "/ 54600000 Km";
 return number1;
-}
+}// De random generated number wordt gegenereerd
 
 function decideFase(){
 	var number=generateRandomNumber();
@@ -31,7 +31,7 @@ function decideFase(){
 		break;
 	}
 	return fase;
-	}
+	}// De fase wordt bepaald d.m.v. de random generated number
 
 function decideRocketPosition(){
 	var number = decideFase();
@@ -58,7 +58,8 @@ function decideRocketPosition(){
 		document.getElementById("rocket").id = "rocket7";
 		break;
 	}
-}
+}// De raket positie wordt bepaald d.m.v. de fase
+
 function bepaalTijd(){
 	var days;
 	minutes = Math.floor(Math.random()*60);
@@ -97,8 +98,60 @@ function bepaalTijd(){
 		document.getElementById('daysAantal').innerHTML= days;
 		document.getElementById('hoursAantal').innerHTML= hours;
 		document.getElementById('minutesAantal').innerHTML= minutes;
+}// De tijd wordt bepaald d.m.v. de fase
 
+/*---------------------------------Gauges---------------------------------------*/
+
+// d3Gauge gets pulled in via browserify-cdn standalone
+// see script tags
+var speedGauges = [];
+var fuelGauges = [];
+
+function createFuelGauge (opts) {
+  var el = document.getElementById('fuelGauge');
+  el.setAttribute('class', 'gauge-container');
+  document.getElementById('fuelMeter').appendChild(el);
+  var g = fuelGauge(el, opts);
+  g.currentValue = g._range / 2;
+  fuelGauges.push(g);
+}//De fuel gauge wordt creert.
+
+function createSpeedGauge (opts) {
+  var el = document.getElementById('speedGauge');
+  el.setAttribute('class', 'gauge-container');
+  document.getElementById('speedMeter').appendChild(el);
+  var g = speedGauge(el, opts);
+  g.currentValue = g._range / 2;
+  speedGauges.push(g);
+}//De speed gauge wordt creert.
+
+function getRandomNextFuelValue(gauge) {
+  gauge.currentValue = 150000;
+  //gauge.currentValue += (Math.random() - 0.5) * gauge._range / 10; 
+  //if (gauge.currentValue < gauge._min) gauge.currentValue = gauge._min;
+  //if (gauge.currentValue > gauge._max) gauge.currentValue = gauge._max;
+  return gauge.currentValue;
 }
+
+function getRandomNextSpeedValue(gauge) {
+  gauge.currentValue = 95716;
+  //gauge.currentValue += (Math.random() - 0.5) * gauge._range / 10; 
+  //if (gauge.currentValue < gauge._min) gauge.currentValue = gauge._min;
+  //if (gauge.currentValue > gauge._max) gauge.currentValue = gauge._max;
+  return gauge.currentValue;
+}
+
+function updateGauges() {
+  speedGauges.forEach(function (gauge) {
+    gauge.write(getRandomNextSpeedValue(gauge));
+  });  
+  fuelGauges.forEach(function (gauge) {
+    gauge.write(getRandomNextFuelValue(gauge));
+  });
+}
+
+/*--------------------------------------------------------------------------------*/
+/*----------------------------------menu------------------------------------------*/
 
 document.getElementsByClassName('menutoggle')[0].onclick = function () {
 	var menu = document.getElementsByTagName('body')[0];
@@ -108,40 +161,14 @@ document.getElementsByClassName('menutoggle')[0].onclick = function () {
 		menu.className = "active";
 	}
 }
+//Dit moet nog uitgewerkt worden
 
-
-// d3Gauge and xtend get pulled in via browserify-cdn standalone
-// see script tags
-var gauges = [];
-
-function createGauge (opts) {
-  var el = document.getElementById('gauge');
-  el.setAttribute('class', 'gauge-container');
-  document.getElementById('fuelMeter').appendChild(el);
-  var g = d3Gauge(el, opts);
-  g.currentValue = g._range / 2;
-  gauges.push(g);
-}
-
-function getRandomNextValue(gauge) {
-  gauge.currentValue += (Math.random() - 0.5) * gauge._range / 10; 
-  if (gauge.currentValue < gauge._min) gauge.currentValue = gauge._min;
-  if (gauge.currentValue > gauge._max) gauge.currentValue = gauge._max;
-  return gauge.currentValue;
-}
-
-function updateGauges() {
-  gauges.forEach(function (gauge) {
-    gauge.write(getRandomNextValue(gauge));
-  });
-}
-
-
-
+/*----------------------------onloadFunctions-------------------------------------*/
 
 window.onload = function(){
 decideRocketPosition();
 bepaalTijd();
-createGauge({ clazz: 'simple', label:  '' });
+createFuelGauge({ clazz: 'fuel', label:  '' });
+createSpeedGauge({ clazz: 'speed', label:  '' });
 setInterval(updateGauges, 500);
 };

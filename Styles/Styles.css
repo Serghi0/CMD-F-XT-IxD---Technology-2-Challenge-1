@@ -297,6 +297,97 @@ main{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	grid-area:fuel;
+	display: grid;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: 0.25fr 1fr; 
+  	text-align: center;
+}
+
+#titleFuel{
+text-align: center;
+grid-row-start: 1;
+grid-row-end: 1;
+}
+
+#fuelMeter{
+	justify-content: center;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	width:100%;
+	height:auto;
+}
+
+/*----------------meter--------------------*/
+
+#fuelGauge{
+	width:100%;
+	height:100%;
+}
+
+.d3-gauge {
+}
+
+/* fuel */
+.d3-gauge.fuel .outer-circle {
+  fill         :  #000000;
+  stroke       :  #000000;
+  stroke-width :  0.5px;
+}
+
+.d3-gauge.fuel .inner-circle {
+  fill         :  #717074;
+  stroke       :  #000000;
+  stroke-width :  2px;
+}
+
+.d3-gauge.fuel .label {
+  fill      :  #000000;
+  font-size :  24px;
+}
+
+.d3-gauge.fuel .major-tick {
+  stroke       :  #000000;
+  stroke-width :  2px;
+}
+
+.d3-gauge.fuel .minor-tick {
+  stroke       :  #000000;
+  stroke-width :  1px;
+}
+
+.d3-gauge.fuel .major-tick-label {
+  fill         :  #000000;
+  stroke-width :  2px;
+  font-size    :  15px;
+}
+
+.d3-gauge.fuel .needle {
+  fill         :  #E31937;
+  stroke       :  #E31937;
+  fill-opacity :  0.7;
+}
+
+.d3-gauge.fuel .needle-container {
+  fill         :  #000;
+  stroke       :  #000;
+  fill-opacity :  1;
+}
+
+.d3-gauge.fuel .current-value {
+  fill         :  #000;
+  stroke-width :  0px;
+}
+
+.d3-gauge.fuel .green-zone {
+  fill :  #FF9900
+}
+
+.d3-gauge.fuel .yellow-zone {
+  fill :  #FF9900
+}
+
+.d3-gauge.fuel .red-zone {
+  fill :  #DC3912
 }
 
 /*---------------------Speed-----------------*/
@@ -306,77 +397,86 @@ main{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	grid-area:speed;
+	text-align: center;
 
 }
+
 
 /*----------------meter--------------------*/
 
-.d3-gauge {
-  float: left;
+#speedGauge{
+	width:100%;
+	height:100%;
 }
 
-/* Simple */
-.d3-gauge.simple .outer-circle {
+.d3-gauge {
+
+}
+
+/* Speed */
+.d3-gauge.speed .outer-circle {
   fill         :  #000000;
   stroke       :  #000000;
   stroke-width :  0.5px;
 }
 
-.d3-gauge.simple .inner-circle {
+.d3-gauge.speed .inner-circle {
   fill         :  #717074;
   stroke       :  #000000;
   stroke-width :  2px;
 }
 
-.d3-gauge.simple .label {
+.d3-gauge.speed .label {
   fill      :  #000000;
   font-size :  24px;
 }
 
-.d3-gauge.simple .major-tick {
+.d3-gauge.speed .major-tick {
   stroke       :  #000000;
   stroke-width :  2px;
 }
 
-.d3-gauge.simple .minor-tick {
+.d3-gauge.speed .minor-tick {
   stroke       :  #000000;
   stroke-width :  1px;
 }
 
-.d3-gauge.simple .major-tick-label {
+.d3-gauge.speed .major-tick-label {
   fill         :  #000000;
   stroke-width :  2px;
   font-size    :  15px;
 }
 
-.d3-gauge.simple .needle {
+.d3-gauge.speed .needle {
   fill         :  #E31937;
   stroke       :  #E31937;
   fill-opacity :  0.7;
 }
 
-.d3-gauge.simple .needle-container {
+.d3-gauge.speed .needle-container {
   fill         :  #000;
   stroke       :  #000;
   fill-opacity :  1;
 }
 
-.d3-gauge.simple .current-value {
+.d3-gauge.speed .current-value {
   fill         :  #000;
   stroke-width :  0px;
 }
 
-.d3-gauge.simple .green-zone {
+.d3-gauge.speed .green-zone {
   fill :  #FF9900
 }
 
-.d3-gauge.simple .yellow-zone {
+.d3-gauge.speed .yellow-zone {
   fill :  #FF9900
 }
 
-.d3-gauge.simple .red-zone {
+.d3-gauge.speed .red-zone {
   fill :  #DC3912
 }
+
+
 
 /*---------------------TimeTillArrival-----------------*/
 
