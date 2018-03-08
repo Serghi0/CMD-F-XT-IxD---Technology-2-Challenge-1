@@ -98,7 +98,7 @@ header{
 /*
   Nav styles
 */
-
+/*
 nav {
   overflow: hidden;
   display: flex;
@@ -122,7 +122,7 @@ nav ul li {
   list-style: none;
   justify-content: center;
   align-items: center; /* align vertical */
-  border-bottom: 1px solid black;
+  /*border-bottom: 1px solid black;
 }
 
 nav ul li:hover {
@@ -132,14 +132,15 @@ nav ul li:hover {
 nav > ul > li > a {
   color: #FFF;
   text-decoration: none;
-}
+}*/
 
 .logo{
 	grid-area:logo;
-	background-image: url("../Images/SpaceX_Logo.svg");
+	/*background-image: url("../Images/SpaceX_Logo.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	background-position: left center;
+	background-position: left center;*/
+	margin-right:auto;
 	margin-left: 5%;
 	display: flex;
 	justify-content: center; /* align horizontal */
