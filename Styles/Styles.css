@@ -64,7 +64,7 @@ header{
 	background-color: #222222;
 	display: grid;
 	grid-template columns: 1fr 0.25fr;
-	grid-gap:10px;
+	grid-gap:0;
 	overflow: hidden;
 	grid-template-areas:
 	"logo menutoggle";
