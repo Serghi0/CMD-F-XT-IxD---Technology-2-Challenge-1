@@ -63,9 +63,9 @@ header{
 	height:100px;
 	background-color: #222222;
 	display: grid;
-	grid-template columns: 3fr 1fr;
+	grid-template columns: 1fr 0.25fr;
 	grid-gap:10px;
-
+	overflow: hidden;
 	grid-template-areas:
 	"logo menutoggle";
 }
