@@ -193,7 +193,7 @@ background-image:
 	grid-area:distanceToMars;
 	display: grid;
   	grid-template-columns: repeat(7, 1fr);
-  	grid-template-rows: 1fr 1fr 1fr; 
+  	grid-template-rows: 1fr 2fr 1fr; 
 
 }
 
@@ -204,29 +204,33 @@ background-image:
 
 #titleMars{
 	text-align:center;
-	grid-column-start:3;
-	grid-column-end:6;
+	grid-column-start:2;
+	grid-column-end:7;
 	grid-row-start:1;
 	grid-row-end:1;
-	background-color: grey;
 	border-radius: 10px;
-
+	background-color: grey;
+	display: flex;	
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */	
 }
-
 
 
 #amountMars{
 	justify-content: center;
 	text-align:center;
-	grid-column-start:3;
-	grid-column-end:6;
+	grid-column-start:2;
+	grid-column-end:7;
 	grid-row-start:3;
 	grid-row-end:3;
 }
 
 #numberAmountMars  {
 	border-radius: 10px;
- background-color: grey;
+ 	background-color: grey;
+ 	display: flex;	
+ 	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
 }
 
 #mars{
@@ -241,15 +245,25 @@ background-image:
   	z-index: 1;
 }
 
-
-
-#rocket{
+#earth{
 	justify-self: center;
 	align-self: center;
 	width:75%;
 	height:auto;
 	grid-column-start: 1;
-  	grid-column-end: 1;
+  	grid-column-end: 2;
+  	grid-row-start: 2;
+  	grid-row-end: 2;
+  	z-index: 1;
+}
+
+#rocket{
+	justify-self: center;
+	align-self: center;
+	width:50%;
+	height:auto;
+	grid-column-start: 1;
+  	grid-column-end: 2;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
@@ -257,10 +271,10 @@ background-image:
 #rocket2{
 	justify-self: center;
 	align-self: center;
-	width:75%;
+	width:50%;
 	height:auto;
 	grid-column-start: 2;
-  	grid-column-end: 2;
+  	grid-column-end: 3;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
@@ -268,10 +282,10 @@ background-image:
 #rocket3{
 	justify-self: center;
 	align-self: center;
-	width:75%;
+	width:50%;
 	height:auto;
 	grid-column-start: 3;
-  	grid-column-end: 3;
+  	grid-column-end: 4;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
@@ -279,10 +293,10 @@ background-image:
 #rocket4{
 	justify-self: center;
 	align-self: center;
-	width:75%;
+	width:50%;
 	height:auto;
 	grid-column-start: 4;
-  	grid-column-end: 4;
+  	grid-column-end: 5;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
@@ -291,10 +305,10 @@ background-image:
 #rocket5{
 	justify-self: center;
 	align-self: center;
-	width:75%;
+	width:50%;
 	height:auto;
 	grid-column-start: 5;
-  	grid-column-end: 5;
+  	grid-column-end: 6;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
@@ -303,10 +317,10 @@ background-image:
 #rocket6{
 	justify-self: center;
 	align-self: center;
-	width:75%;
+	width:50%;
 	height:auto;
 	grid-column-start: 6;
-  	grid-column-end: 6;
+  	grid-column-end: 7;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
@@ -315,10 +329,10 @@ background-image:
 #rocket7{
 	justify-self: center;
 	align-self: center;
-	width:75%;
+	width:50%;
 	height:auto;
 	grid-column-start: 7;
-  	grid-column-end: 7;
+  	grid-column-end: 8;
   	grid-row-start: 2;
   	grid-row-end: 2;
   	z-index: 2;
@@ -757,7 +771,7 @@ body{
 main{
 	display: grid;
 	grid-template-columns: repeat(3,3fr);
-	grid-template-rows: 0.125fr 0.5fr 0.5fr 1fr;
+	grid-template-rows: 1fr 4fr 4fr;
 	grid-gap: 15px;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -775,27 +789,42 @@ main{
 #distanceToMars{
 	grid-column-start:1;
 	grid-column-end:4;
-	grid-row-start:4;
-	grid-row-end:5;
+	grid-row-start:3;
+	grid-row-end:4;
 }
+
+/*--------------------------------------*/
+
+#titleMars{
+	grid-column-start:3;
+	grid-column-end:6;
+}
+
+
+#amountMars{
+	grid-column-start:3;
+	grid-column-end:6;
+}
+
+/*--------------------------------------*/
 
 #fuel{
 	grid-column-start: 3;
   	grid-column-end: 4;
   	grid-row-start: 2;
-  	grid-row-end: 4;
+  	grid-row-end: 3;
 }
 #speed{
 	grid-column-start: 2;
   	grid-column-end: 3;
   	grid-row-start: 2;
-  	grid-row-end: 4;
+  	grid-row-end: 3;
   }
 #timeTillArrival{
 	grid-column-start: 1;
   	grid-column-end: 2;
   	grid-row-start: 2;
-  	grid-row-end: 4;
+  	grid-row-end: 3;
 }
 
 /*--------------------Footer--------------------------*/

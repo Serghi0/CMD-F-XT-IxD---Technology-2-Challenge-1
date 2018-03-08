@@ -4,26 +4,25 @@ document.getElementById('numberAmountMars').innerHTML= number1 + "/ 54600000 km"
 return number1;
 }// De random generated number wordt gegenereerd
 
-function decideFase(){
-	var number=generateRandomNumber();
+function decideFase(number){
 	var fase=0;
 	switch(true){
 		case (number==0):
 		fase=1;
 		break;		
-		case (number<10920000):
+		case (number<=10920000):
 		fase=2;
 		break;
-		case (number>10920000 && number<21840000):
+		case (number>=10920000 && number<=21840000):
 		fase=3;
 		break;
-		case (number>21840000 && number<32760000):
+		case (number>=21840000 && number<=32760000):
 		fase=4;
 		break;
-		case (number>32760000 && number<43680000):
+		case (number>=32760000 && number<=43680000):
 		fase=5;
 		break;
-		case (number>43680000 && number<54600000 ):
+		case (number>=43680000 && number<=54600000 ):
 		fase=6;
 		break;
 		case (number==54600000):
@@ -33,8 +32,7 @@ function decideFase(){
 	return fase;
 	}// De fase wordt bepaald d.m.v. de random generated number
 
-function decideRocketPosition(){
-	var number = decideFase();
+function decideRocketPosition(number){
 	switch(true){
 		case (number==1):
 		document.getElementById("rocket").id = "rocket";
@@ -71,10 +69,9 @@ function pad(number, length) {
 
 }//zorgt dat een getal de gewenste aantal digits bevat
 
-function bepaalTijd(){
+function bepaalTijd(fase){
 	var days;
 	minutes = pad(Math.floor(Math.random()*60),2);
-	var fase = decideFase();
 	switch(true){
 		case(fase==1):		
 		days = pad(Math.floor(Math.random()*(238-237+1)+237),3);
@@ -136,30 +133,56 @@ function createSpeedGauge (opts) {
   speedGauges.push(g);
 }//De speed gauge wordt creert.
 
-function getRandomNextFuelValue(gauge) {
-  gauge.currentValue = 154231;
-  //gauge.currentValue += (Math.random() - 0.5) * gauge._range / 10; 
-  //if (gauge.currentValue < gauge._min) gauge.currentValue = gauge._min;
-  //if (gauge.currentValue > gauge._max) gauge.currentValue = gauge._max;
+function getFuelValue(gauge, number) {
+	switch(true){
+		case (number==1):
+		  gauge.currentValue = gauge._max;
+		break;		
+		case (number==2):
+		gauge.currentValue = ((gauge._max/7) * 6);
+		break;
+		case (number==3):
+		gauge.currentValue = ((gauge._max/7) * 5);
+		break;
+		case (number==4):
+		gauge.currentValue = ((gauge._max/7) * 4);
+		break;
+		case (number==5):
+		gauge.currentValue = ((gauge._max/7) * 3);
+		break;
+		case (number==6):
+		gauge.currentValue = ((gauge._max/7) * 2);
+		break;
+		case (number==7):
+		gauge.currentValue = (gauge._max/7);
+		break;
+}
   return gauge.currentValue;
+
 }
 
-function getRandomNextSpeedValue(gauge) {
-  gauge.currentValue = 95716;
-  //gauge.currentValue += (Math.random() - 0.5) * gauge._range / 10; 
-  //if (gauge.currentValue < gauge._min) gauge.currentValue = gauge._min;
-  //if (gauge.currentValue > gauge._max) gauge.currentValue = gauge._max;
+function getSpeedValue(gauge, number) {
+	if(number==1){
+		gauge.currentValue = gauge._max;
+	}else if(number>=2 && number<7){
+		gauge.currentValue = ((gauge._max/7) * 5);
+	}else if(number==7){
+		gauge.currentValue = (gauge._max/7);
+	}
+
   return gauge.currentValue;
+
 }
 
-function updateGauges() {
+/*function updateGauges() {
   speedGauges.forEach(function (gauge) {
-    gauge.write(getRandomNextSpeedValue(gauge));
+    gauge.write(getSpeedValue(gauge));
   });  
   fuelGauges.forEach(function (gauge) {
-    gauge.write(getRandomNextFuelValue(gauge));
+    gauge.write(getFuelValue(gauge));
   });
-}
+}*/ //optionele update gauge functie
+
 
 /*--------------------------------------------------------------------------------*/
 /*----------------------------------menu------------------------------------------*/
@@ -172,14 +195,22 @@ function updateGauges() {
 		menu.className = "active";
 	}
 }*/
-//Dit moet nog uitgewerkt worden
+//Dit moet nog uitgewerkt worden(optioneel)
 
 /*----------------------------onloadFunctions-------------------------------------*/
 
 window.onload = function(){
-decideRocketPosition();
-bepaalTijd();
+var number = decideFase(generateRandomNumber());
+decideRocketPosition(number);
+bepaalTijd(number);
 createFuelGauge({ clazz: 'fuel', label:  'Fuel in kJ' });
 createSpeedGauge({ clazz: 'speed', label:  'Speed in km/h' });
-setInterval(updateGauges, 500);
+fuelGauges.forEach(function (gauge) {
+  gauge.write(getFuelValue(gauge,number));
+});
+speedGauges.forEach(function (gauge) {
+    gauge.write(getSpeedValue(gauge,number));
+});
+//setInterval(updateGauges, 500);
+//updateGauges();
 };
