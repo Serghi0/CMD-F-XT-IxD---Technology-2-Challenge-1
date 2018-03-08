@@ -85,15 +85,15 @@ header{
   text-decoration: none;
 }
 
-.active {
+/*.active {
   grid-template-columns: 140px 1fr 1fr;
   transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
-}
+/*}*/
 
-.inactive {
+/*.inactive {
   grid-template-columns: 0 1fr 1fr;
   transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
-}
+/*}*/
 
 /*
   Nav styles
@@ -172,7 +172,8 @@ main{
 
 #dashboardTitle{
 	grid-area:Title;
-	border-bottom: 2px solid #000000;  
+	border-bottom: 2px solid #000000;
+	text-transform: uppercase;  
 }
 
 .graphs{
@@ -555,6 +556,11 @@ grid-row-end: 1;
 	display: flex;
 	justify-content: center; /* align horizontal */
 	align-items: center; /* align vertical */
+}
+
+#days{border-radius: 10px 0 0 0;}
+#minutes{border-radius: 0 10px 0 0;}
+#timeFooter{border-radius:0 0 10px 10px;
 }
 
 #days{
