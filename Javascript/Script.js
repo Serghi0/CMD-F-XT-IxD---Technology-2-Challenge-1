@@ -1,7 +1,7 @@
 function generateRandomNumber(){
-number1 = Math.floor(Math.random()*54600000);
-document.getElementById('numberAmountMars').innerHTML= number1 + "/ 54600000 km";
-return number1;
+var number = Math.floor(Math.random()*54600000);
+document.getElementById('numberAmountMars').innerHTML= number + "/ 54600000 km";
+return number;
 }// De random generated number wordt gegenereerd
 
 function decideFase(number){
