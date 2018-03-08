@@ -141,8 +141,8 @@ nav > ul > li > a {
 }
 
 .logo > img {
-	width:50%;
-	height: 50%;
+	width:100%;
+	height: auto;
 }
 
 /*-------------------------------main-----------------------------*/
@@ -678,9 +678,6 @@ body{
 	margin-left: auto;
 }
 
-.logo > img{
-width: 100%;height: auto;}
-
 main{
 	display: grid;
 	grid-template-columns: repeat(6,1fr);
@@ -752,8 +749,6 @@ body{
 	"footer footer footer";
 }
 
-.logo > img{
-width: 100%;height: auto;}
 
 .menutoggle{
 	margin-left: auto;
