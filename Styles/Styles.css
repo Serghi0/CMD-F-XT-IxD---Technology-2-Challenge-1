@@ -70,8 +70,7 @@ header{
 
 .menutoggle{
 	grid-area:menutoggle;
-	margin-left: 10%;
-	margin-right:5%;
+	margin-right:5px;
 	display: flex;
 	justify-content: center; /* align horizontal */
 	align-items: center; /* align vertical */
