@@ -63,7 +63,7 @@ header{
 	height:100px;
 	background-color: #222222;
 	display: grid;
-	grid-template columns: 1fr 1fr;
+	grid-template columns: 3fr 1fr;
 	grid-gap:10px;
 
 	grid-template-areas:
@@ -136,18 +136,16 @@ nav > ul > li > a {
 
 .logo{
 	grid-area:logo;
-	/*background-image: url("../Images/SpaceX_Logo.svg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-position: left center;*/
 	margin-right:auto;
 	margin-left: 5%;
 	display: flex;
-	justify-content: center; /* align horizontal */
+	justify-content: left; /* align horizontal */
 	align-items: center; /* align vertical */
 }
 
 .logo > img {
+	width:50%;
+	height: 50%;
 }
 
 /*-------------------------------main-----------------------------*/
