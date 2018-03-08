@@ -41,15 +41,15 @@ html {
 body{
 	background-color: #C9CBCC;
 	display: grid;
-	grid-template-columns: 0 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-row-gap: 10px;
 	margin:0;
 
 	
 	grid-template-areas:
-	"menu header header"
-	"menu main main"
-	"menu footer footer";
+	"header header"
+	"main main"
+	"footer footer";
 }
 
 
