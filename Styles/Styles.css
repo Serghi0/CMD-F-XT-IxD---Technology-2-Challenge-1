@@ -674,7 +674,12 @@ body{
 	"footer footer";
 }
 
+.menutoggle{
+	margin-left: auto;
+}
 
+.logo > img{
+width: 100%;height: auto;}
 
 main{
 	display: grid;
@@ -747,8 +752,11 @@ body{
 	"footer footer footer";
 }
 
-.logo{
-	background-size: 50% 100%;
+.logo > img{
+width: 100%;height: auto;}
+
+.menutoggle{
+	margin-left: auto;
 }
 
 main{
