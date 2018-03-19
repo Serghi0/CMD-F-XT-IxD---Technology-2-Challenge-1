@@ -137,7 +137,7 @@ nav > ul > li > a {
 	margin-right:auto;
 	margin-left: 5%;
 	display: flex;
-	justify-content: left; /* align horizontal */
+	justify-content: flex-start; /* align horizontal */
 	align-items: center; /* align vertical */
 }
 
